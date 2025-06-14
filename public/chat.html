@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-time Chat App</title>
+    <!-- Link to the main stylesheet for application-wide styling -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="chat-container">
+        <!-- Header area with welcome message and logout button -->
+        <div class="chat-header">
+            <h1 id="welcomeMessage"></h1>
+            <button id="logoutButton" class="logout-button">Logout</button>
+        </div>
+
+        <!-- Main content area for the two-column layout -->
+        <div class="chat-main-content">
+            <!-- Left Column: Room actions and Available Rooms list -->
+            <div class="left-column">
+                <!-- Section for Room Generation and Joining -->
+                <div class="room-actions">
+                    <button id="generateRoomCodeButton">Generate New Room Code</button>
+                    <div id="generatedCodeDisplay" style="display: none;">
+                        <p>Your Room Code: <span id="displayRoomCode"></span></p>
+                        <button id="copyRoomCodeButton">Copy Code</button>
+                    </div>
+                    <hr>
+                    <div class="join-existing-room">
+                        <input type="text" id="enterRoomCodeInput" placeholder="Enter existing room code">
+                        <button id="joinExistingRoomButton">Join Room</button>
+                    </div>
+                </div>
+
+                <!-- Section for listing all available rooms -->
+                <div class="generated-rooms-section">
+                    <h2>Available Rooms</h2>
+                    <div id="roomsList" class="rooms-list">
+                        <p class="loading-message">Loading rooms...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Chat Messages and Message Input Form -->
+            <div class="right-column">
+                <!-- Area where chat messages are displayed -->
+                <div class="messages-box" id="messages">
+                    <!-- Chat messages will be appended here by chat.js -->
+                </div>
+
+                <!-- Form for typing and sending chat messages -->
+                <form id="messageForm">
+                    <input type="text" id="messageInput" placeholder="Please join or generate a room to chat..." autocomplete="off" disabled>
+                    <button type="submit" id="sendMessageButton">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to the Socket.IO client library (served by the Node.js server) -->
+    <script src="/socket.io/socket.io.js"></script>
+    <!-- Link to your custom chat application's JavaScript logic -->
+    <script src="chat.js"></script>
+</body>
+</html>
