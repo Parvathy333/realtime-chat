@@ -70,23 +70,18 @@ Ensure you have the following software installed on your system:
 3.  **Install dependencies:**
     ```bash
     npm install
-    # or if you use yarn
-    # yarn install
     ```
-    (If your project has separate frontend/backend directories, you might need to `cd` into each and run `npm install`.)
 
 ### Running the App
 
 1.  **Start the server:**
     ```bash
-    npm start
-    # Or, if you have a development script configured (e.g., for hot-reloading):
-    # npm run dev
+    node server.js
     ```
     The console will usually show you which port the server is listening on (e.g., "Server running on port 3000").
 
 2.  **Open in your browser:**
-    Navigate to `http://localhost:3000` (or the specific port your server is using) in your web browser.
+    Navigate to `http://localhost:3000` in your web browser.
 
 ---
 
@@ -109,7 +104,7 @@ Contributions are highly welcome! If you have suggestions for improvements, new 
 1.  **Fork the repository:** Click the 'Fork' button at the top right of this repository page.
 2.  **Clone your forked repository:**
     ```bash
-    git clone [https://github.com/YOUR_USERNAME/realtime-chat.git](https://github.com/YOUR_USERNAME/realtime-chat.git)
+    git clone [https://github.com/YOUR_USERNAME/realtime-chat.git](https://github.com/Parvathy333/realtime-chat.git)
     ```
 3.  **Create a new branch** for your feature or bugfix:
     ```bash
