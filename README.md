@@ -33,6 +33,7 @@ This is a real-time web-based chat application designed for instant communicatio
 * (You can add more specific features here if your app has them, e.g., "Typing indicators," "User nicknames," "Basic message history," etc.)
 
 ---
+
 ## Screenshots
 
 ![Screenshot of the main chat interface](https://github.com/Parvathy333/realtime-chat/blob/main/screenshots/one.png)
