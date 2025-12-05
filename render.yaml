@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: realtime-chat
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: ENCRYPTION_KEY
+        generateValue: true
+      - key: ENCRYPTION_IV
+        generateValue: true
+      - key: DATABASE_URL
+        fromDatabase:
+          name: chat-db
+          property: connectionString
+      - key: FRONTEND_URL
+        sync: false
+
+databases:
+  - name: chat-db
+    databaseName: chat_app_db
+    user: chat_user
+    plan: free
